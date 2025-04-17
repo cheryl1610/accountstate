@@ -1,0 +1,14 @@
+stateDiagram-v2
+li:account logged in 
+ac:Active Account
+na:no account
+in:inactive account
+    na --> ac : Sign Up
+    li --> na : Delete Account
+    li --> in : Deactivate Account
+    in --> na : Delete Account
+    in --> ac : Reactivate Account
+    ac --> ac : Failed Log in 
+    ac --> li : Log in 
+    li --> ac : Log out
+    ac --> in : Deactivate Account
